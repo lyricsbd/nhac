@@ -10,12 +10,31 @@
 
 
 
-
+<body>
     
     <div id='myalbum-player'></div>
 
            
 
+   <script>
+function getParam ( sname )
+{
+  var params = location.search.substr(location.search.indexOf("?")+1);
+  var sval =  params.replace("sv=", "");
+  
+  return sval;
+}
+var sv = getParam("sv");
+
+</script>
+<script>
+  var responseText = ''+sv+'';
+  urlArry = responseText.split(',');
+  start = true;
+  num_of_urlArry = urlArry.length;
+  index_of_urlArry = 0;
+</script>
+  
 <script type="text/javascript" src="jwplayer-7.12.13/css/data-log-1.0.6.js"></script>
 <script type="text/javascript" src="jwplayer-7.12.13/album/jwplayer.js"></script>
 
@@ -29,7 +48,7 @@ jwplayer.key="YgtWotBOi+JsQi+stgRlQ3SK21W2vbKi/K2V86kVbwU=";
             base:'https://lyricsbd.github.io/nhac/jwplayer-7.12.13/album/',
             stretching: 'fill',
             thumb : 'https://109cdf7de.vws.vegacdn.vn/kv0puCNE4oNNfn7YhOpK/1547805125/v1/album/s2/0/19/138/20064826.jpg',
-            playlist: [{"sources":[{"file":"https:\/\/109a15170.vws.vegacdn.vn\/PQpzgtx3YGkHcG9f5hGa5Q\/1550554133\/media1\/song\/web1\/32\/265997\/265997.mp3?v=3","label":"128K"},{"file":"https:\/\/109a15170.vws.vegacdn.vn\/lTWv4NVCD4bXf-BlO4HkjQ\/1550554133\/media1\/song\/web2\/32\/265997\/265997.mp3?v=3","label":"320K"}],"image":"https:\/\/109cdf7de.vws.vegacdn.vn\/kv0puCNE4oNNfn7YhOpK\/1550510933\/v1\/artists\/cover\/0\/0\/39\/40468.jpg","thumb":"https:\/\/109cdf7de.vws.vegacdn.vn\/kv0puCNE4oNNfn7YhOpK\/1547805125\/v1\/album\/s2\/0\/19\/138\/20064826.jpg","mediaid":"527902","media_title":"#BabyBaby","media_desc":"Monstar","title":"#BabyBaby","description":"Monstar","active_from":0,"link":"https:\/\/nhac.vn\/album\/nhung-nhom-nhac-viet-moi-plWM1Lko","tracks":[{"file":"https:\/\/nhac.vn\/lyric\/so5ODWV.vtt","kind":"captions","label":"L\u1eddi Karaoke","default":true}],"lyrics":""},{"sources":[{"file":"https:\/\/109a15170.vws.vegacdn.vn\/xEYX55fL_HJofZRygwQrSA\/1550554133\/media1\/song\/web1\/31\/257979\/257979.mp3?v=3","label":"128K"},{"file":"https:\/\/109a15170.vws.vegacdn.vn\/oefSJkcLn0WdEw9Vvk_ucQ\/1550554133\/media1\/song\/web2\/31\/257979\/257979.mp3?v=3","label":"320K"}],"image":"https:\/\/109cdf7de.vws.vegacdn.vn\/kv0puCNE4oNNfn7YhOpK\/1550510933\/v1\/artists\/cover\/0\/0\/37\/38096.jpg","thumb":"https:\/\/109cdf7de.vws.vegacdn.vn\/kv0puCNE4oNNfn7YhOpK\/1547805125\/v1\/album\/s2\/0\/19\/138\/20064826.jpg","mediaid":"505550","media_title":"Love You Want You","media_desc":"Lip B","title":"Love You Want You","description":"Lip B","active_from":0,"link":"https:\/\/nhac.vn\/album\/nhung-nhom-nhac-viet-moi-plWM1Lko","tracks":[],"lyrics":""}],            
+            playlist: [{"sources":[{"file":""+sv+"","label":"HD"}],"image":"","thumb":"https://media3.giphy.com/media/4crh6YDxGvHNK/giphy.gif","mediaid":"527902","media_title":"#BabyBaby","media_desc":"Shawon","title":"Mp3 Player","description":"Shawon","active_from":0,"link":"","tracks":[{"file":"https://nhac.vn/lyric/so5ODWV.vtt","kind":"captions","label":"L\u1eddi Karaoke","default":true}],"lyrics":""}],            
             image: '/web/images/bg_default.png',
             title:'Những Nhóm Nhạc Việt Mới',
             skin: {
@@ -45,8 +64,8 @@ jwplayer.key="YgtWotBOi+JsQi+stgRlQ3SK21W2vbKi/K2V86kVbwU=";
                         performance: true,          //false true,  default true
                         perform_debug: false,        //false true,  default false
                         duration: 20,  
-                        user_id: '949233a6bacffb31b3f941133f1d5126',
-                        vega_id: '949233a6bacffb31b3f941133f1d5126',
+                        user_id: '',
+                        vega_id: '',
                         msisdn: '',
                         package_id: 0,
                         album_id : '20064826',
@@ -58,8 +77,8 @@ jwplayer.key="YgtWotBOi+JsQi+stgRlQ3SK21W2vbKi/K2V86kVbwU=";
                         utm_campaign: '', 
                         device_id: '', 
                         channel: 'WEB', 
-                        session_id: 'bfbekchn4v0m2dag38bbpc09e4',
-                        url_referer: 'https%3A%2F%2Fnhac.vn%2Fhot-list',
+                        session_id: '',
+                        url_referer: '',
                         action_type: 'play_song',
                         player_type: 'NotDRM',
                         service_id: 0, 
